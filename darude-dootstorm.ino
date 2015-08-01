@@ -2,7 +2,7 @@
 
 Gamer gamer;
 
-#define NUMFRAMES 16
+#define NUMFRAMES 12
 
 /* Each of these blocks of code
  corresponds to one frame of the
@@ -13,164 +13,124 @@ Gamer gamer;
  */
 byte frames[NUMFRAMES][8] = {
   {
-    B00000000,
-    B00111000,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00111000,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111100,
-    B00100100,
-    B00100100,
-    B00111100,
-    B00100100,
-    B00100100,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111100,
-    B00100100,
-    B00100100,
-    B00111000,
-    B00100100,
-    B00100100,
-    B00000000
-  },
-  {
-    B00000000,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00111100,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111000,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00111000,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111100,
-    B00100000,
-    B00111000,
-    B00100000,
-    B00100000,
-    B00111100,
-    B00000000
-  },
-  {
-    B00000000,
-    B00000000,
-    B00000000,
-    B00111100,
-    B00000000,
-    B00000000,
-    B00000000,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111100,
-    B00100000,
-    B00111100,
-    B00000100,
-    B00000100,
-    B00111100,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111100,
-    B00100100,
-    B00100100,
-    B00111100,
-    B00100100,
-    B00100100,
-    B00000000
-  },
-  {
-    B00000000,
-    B00100100,
-    B00110100,
-    B00110100,
-    B00101100,
-    B00101100,
-    B00100100,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111000,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00111000,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111100,
-    B00100000,
-    B00111100,
-    B00000100,
-    B00000100,
-    B00111100,
-    B00000000
-  },
-  {
-    B00000000,
-    B00111100,
     B00010000,
     B00010000,
     B00010000,
     B00010000,
     B00010000,
-    B00000000
+    B00010000,
+    B00010000,
+    B00010000
   },
   {
-    B00000000,
-    B00111100,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00100100,
-    B00111100,
-    B00000000
+    B00010000,
+    B00010000,
+    B00001000,
+    B00001000,
+    B00010000,
+    B00100000,
+    B00100000,
+    B00010000
   },
   {
-    B00000000,
-    B00111100,
-    B00100100,
-    B00100100,
-    B00111000,
-    B00100100,
-    B00100100,
-    B00000000
+    B00010000,
+    B00001100,
+    B00000010,
+    B00001100,
+    B00110000,
+    B01000000,
+    B00110000,
+    B00001000
   },
   {
-    B00000000,
-    B01000010,
-    B01100110,
-    B01011010,
-    B01000010,
-    B01000010,
-    B01000010,
-    B00000000
+    B00010000,
+    B00001110,
+    B00000001,
+    B00001110,
+    B01110000,
+    B10000000,
+    B01110000,
+    B00001000
+  },
+  {
+    B00010000,
+    B00001100,
+    B00000010,
+    B00001100,
+    B00110000,
+    B01000000,
+    B00110000,
+    B00001000
+  },
+  {
+    B00010000,
+    B00010000,
+    B00001000,
+    B00001000,
+    B00010000,
+    B00100000,
+    B00100000,
+    B00010000
+  },
+  {
+    B00010000,
+    B00010000,
+    B00010000,
+    B00010000,
+    B00010000,
+    B00010000,
+    B00010000,
+    B00010000
+  },
+  {
+    B00010000,
+    B00010000,
+    B00100000,
+    B00100000,
+    B00010000,
+    B00001000,
+    B00001000,
+    B00010000
+  },
+  {
+    B00001000,
+    B00110000,
+    B01000000,
+    B00110000,
+    B00001100,
+    B00000010,
+    B00001100,
+    B00010000
+  },
+  {
+    B00001000,
+    B01110000,
+    B10000000,
+    B01110000,
+    B00001110,
+    B00000001,
+    B00001110,
+    B00010000
+  },
+  {
+    B00001000,
+    B00110000,
+    B01000000,
+    B00110000,
+    B00001100,
+    B00000010,
+    B00001100,
+    B00010000
+  },
+  {
+    B00010000,
+    B00010000,
+    B00100000,
+    B00100000,
+    B00010000,
+    B00001000,
+    B00001000,
+    B00010000
   }
 };
 
@@ -198,318 +158,490 @@ void loop() {
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[1]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[2]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[3]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[4]);
   gamer.updateDisplay();
-  delay(150);
-  gamer.stopTone();
   delay(50);
-  gamer.playTone(150);
+  gamer.stopTone();
   gamer.printImage(frames[5]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[6]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[7]);
   gamer.updateDisplay();
   delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[8]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[9]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[10]);
+  gamer.updateDisplay();
+  delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[11]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[1]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[2]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[3]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[4]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[5]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[6]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[7]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[8]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[9]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[10]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[11]);
   gamer.updateDisplay();
-  delay(150);
-  gamer.stopTone();
   delay(50);
-  gamer.playTone(100);
-  gamer.printImage(frames[12]);
+  gamer.playTone(150);
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[1]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[2]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[3]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(100);
-  gamer.printImage(frames[13]);
+  gamer.printImage(frames[4]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[5]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(100);
-  gamer.printImage(frames[14]);
+  gamer.printImage(frames[6]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[7]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(100);
-  gamer.printImage(frames[15]);
+  gamer.printImage(frames[8]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[9]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(100);
+  gamer.printImage(frames[10]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[11]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(100);
   gamer.printImage(frames[0]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(100);
   gamer.printImage(frames[1]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(100);
   gamer.printImage(frames[2]);
   gamer.updateDisplay();
-  delay(150);
-  gamer.stopTone();
   delay(50);
-  gamer.playTone(120);
+  gamer.stopTone();
   gamer.printImage(frames[3]);
   gamer.updateDisplay();
   delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(120);
+  gamer.playTone(100);
   gamer.printImage(frames[4]);
   gamer.updateDisplay();
   delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(120);
   gamer.printImage(frames[5]);
   gamer.updateDisplay();
   delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(120);
   gamer.printImage(frames[6]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(120);
   gamer.printImage(frames[7]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(120);
   gamer.printImage(frames[8]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(120);
   gamer.printImage(frames[9]);
   gamer.updateDisplay();
-  delay(150);
+  delay(50);
+  gamer.playTone(120);
+  gamer.printImage(frames[10]);
+  gamer.updateDisplay();
+  delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[11]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(120);
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[1]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(120);
+  gamer.printImage(frames[2]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[3]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(120);
+  gamer.printImage(frames[4]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[5]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(120);
+  gamer.printImage(frames[6]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[7]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(120);
+  gamer.printImage(frames[8]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[9]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[10]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[11]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(170);
-  gamer.printImage(frames[10]);
-  gamer.updateDisplay();
-  delay(150);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
-  gamer.printImage(frames[11]);
-  gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
-  gamer.printImage(frames[12]);
-  gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
-  gamer.printImage(frames[13]);
-  gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
-  gamer.printImage(frames[14]);
-  gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
-  gamer.printImage(frames[15]);
-  gamer.updateDisplay();
-  delay(150);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[0]);
   gamer.updateDisplay();
   delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[1]);
   gamer.updateDisplay();
   delay(50);
-  gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[2]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[3]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[4]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[5]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[6]);
   gamer.updateDisplay();
-  delay(150);
-  gamer.stopTone();
   delay(50);
-  gamer.playTone(100);
+  gamer.stopTone();
   gamer.printImage(frames[7]);
   gamer.updateDisplay();
-  delay(150);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[8]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[9]);
   gamer.updateDisplay();
-  delay(50);
-  gamer.stopTone();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[10]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
-  delay(50);
-  gamer.playTone(150);
   gamer.printImage(frames[11]);
   gamer.updateDisplay();
   delay(50);
-  gamer.stopTone();
-  delay(50);
   gamer.playTone(150);
-  gamer.printImage(frames[12]);
+  gamer.printImage(frames[0]);
   gamer.updateDisplay();
-  delay(150);
-  gamer.stopTone();
   delay(50);
-  gamer.playTone(150);
-  gamer.printImage(frames[13]);
+  gamer.printImage(frames[1]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[2]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[3]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(150);
-  gamer.printImage(frames[14]);
+  gamer.printImage(frames[4]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[5]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(150);
-  gamer.printImage(frames[15]);
+  gamer.printImage(frames[6]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[7]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[8]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[9]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[10]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[11]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[0]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[1]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[2]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[3]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[4]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[5]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[6]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[7]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(100);
+  gamer.printImage(frames[8]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[9]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[10]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[11]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[0]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[1]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[2]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[3]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[4]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[5]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[6]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[7]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[8]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[9]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[10]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[11]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[0]);
   gamer.updateDisplay();
   delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[1]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[2]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[3]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[4]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[5]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[6]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[7]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[8]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[9]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.playTone(150);
+  gamer.printImage(frames[10]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.stopTone();
+  gamer.printImage(frames[11]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(150);
   gamer.printImage(frames[0]);
   gamer.updateDisplay();
-  delay(150);
+  delay(50);
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
+  delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
   delay(50);
   gamer.playTone(100);
   gamer.printImage(frames[0]);
   gamer.updateDisplay();
-  delay(150);
+  delay(50);
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
+  delay(50);
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
+  delay(50);
   gamer.stopTone();
+  gamer.printImage(frames[0]);
+  gamer.updateDisplay();
   delay(50);
   
 
